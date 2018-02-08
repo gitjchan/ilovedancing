@@ -1,69 +1,40 @@
-$( document ).ready(function() {
+// var numOne = document.getElementById("num-one")
+// var numTwo = document.getElementById("num-two")
+// var addSum = document.getElementById("add-sum")
 
-  // Get started!
-  smoothScroll(1000);
-  workBelt();
-  // Uses maxFontSize here and defaults to CSS one on fail.
-  $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '120px' });
-  $("section .email").fitText(1, { minFontSize: '14px', maxFontSize: '100px' });
-});
+// function add() {
+//   var one = parseFloat(numOne.value) || 0 ;
+//   var two = parseFloat(numTwo.value) || 0 ;
+//   addSum.innerHTML = "your sum is "+(one+two);
+// };
 
-// SmoothScroll Function
-function smoothScroll (duration) {
-	$('a[href^="#"]').on('click', function(event) {
+// numOne.addEventListener("input", add);
+// numTwo.addEventListener("input", add);
 
-		var target = $( $(this).attr('href') );
 
-		if( target.length ) {
-			event.preventDefault();
-			$('html, body').animate({
-				scrollTop: target.offset().top
-			}, duration);
-		}
-	});	
-}
+var lindy = document.getElementById("lindy");
+var shag = document.getElementById("shag");
+var blues = document.getElementById("blues");
 
-function workBelt() {
-	$('.thumb-unit').click(function() {
-		$('.work-belt').css('left', '-100%');
-		$('.thumb-descriptions').show();
-	});
 
-	$('.arrowNav').click(function() {
-		$('.work-belt').css('left', '0%');
-		$('.thumb-descriptions').hide(800);
-	});
-}
+lindy.addEventListener("click", picLink);
+shag.addEventListener("click", picLink);
+blues.addEventListener("click", picLink);
 
-(function( $ ){
+function picLink() {
+  var allImages = document.querySelectorAll("img");
+  var picId = this.attributes["data-img"].value;
+  var pic = document.getElementById(picId);
+  for (i = 0; i < allImages.length; i++) {
+   if (allImages[i] !== pic) {
+     allImages[i].className = "hide";
+    }
 
-  $.fn.fitText = function( kompressor, options ) {
+  }
 
-    // Setup options
-    var compressor = kompressor || 1,
-        settings = $.extend({
-          'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
-        }, options);
-
-    return this.each(function(){
-
-      // Store the object
-      var $this = $(this);
-
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-      };
-
-      // Call once to set.
-      resizer();
-
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-    });
-
-  };
-
-})( jQuery );
+  if (pic.className === "hide") {
+    pic.className = "";
+  } else {
+    pic.className = "hide";
+  } 
+};

@@ -450,8 +450,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("/assets/css/fonts/icomoon.eot?drvffz");
-  src: url("/assets/css/fonts/icomoon.eot?drvffz#iefix") format("embedded-opentype"), url("/assets/css/fonts/icomoon.ttf?drvffz") format("truetype"), url("/assets/css/fonts/icomoon.woff?drvffz") format("woff"), url("/assets/css/fonts/icomoon.svg?drvffz#icomoon") format("svg");
+  src: url("assets/css/fonts/icomoon.eot?drvffz");
+  src: url("assets/css/fonts/icomoon.eot?drvffz#iefix") format("embedded-opentype"), url("assets/css/fonts/icomoon.ttf?drvffz") format("truetype"), url("assets/css/fonts/icomoon.woff?drvffz") format("woff"), url("assets/css/fonts/icomoon.svg?drvffz#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -768,11 +768,11 @@ li:hover > ul.dropDown li:nth-child(2) {
           z-index: 100;
           transition: left 0.65s ease-out; }
         .slider .overflow .inner article .slide1 {
-          background-image: url("/assets/img/lindy.jpg"); }
+          background-image: url("assets/img/lindy.jpg"); }
         .slider .overflow .inner article .slide2 {
-          background-image: url("/assets/img/shag.jpg"); }
+          background-image: url("assets/img/shag.jpg"); }
         .slider .overflow .inner article .slide3 {
-          background-image: url("/assets/img/blues.jpg"); }
+          background-image: url("assets/img/blues.jpg"); }
 
 .menu {
   position: absolute;

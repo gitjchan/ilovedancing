@@ -582,8 +582,8 @@ input[type="button"] {
   .panels .panel.open-active {
     flex: 10; }
   .panels .panel-1 {
-    background-image: url(/assets/img/lindy.jpg); }
+    background-image: url(../img/lindy.jpg); }
   .panels .panel-2 {
-    background-image: url(/assets/img/shag.jpg); }
+    background-image: url(../img/shag.jpg); }
   .panels .panel-3 {
-    background-image: url(/assets/img/blues.jpg); }
+    background-image: url(../img/blues.jpg); }
